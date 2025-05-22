@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+producto-api,com.luciano.productoapi.dto,ProductoRequestDTO,0,46,0,0,0,19,0,10,0,10
+producto-api,com.luciano.productoapi.dto,ProductoResponseDTO,27,39,0,0,13,14,7,7,7,7
+producto-api,com.luciano.productoapi.model,Producto,24,46,0,0,12,17,6,9,6,9
+producto-api,com.luciano.productoapi.service,ProductoService,10,42,0,0,2,16,1,2,1,2
+producto-api,com.luciano.productoapi.service,ProductoService.new Function() {...},22,0,0,0,8,0,2,0,2,0
+producto-api,com.luciano.productoapi,ProductoApiApplication,5,3,0,0,2,1,1,1,1,1
+producto-api,com.luciano.productoapi.config,TestDataInitializer,0,25,0,0,0,6,0,3,0,3
+producto-api,com.luciano.productoapi.exception,GlobalExceptionHandler,0,78,0,0,0,26,0,6,0,6
+producto-api,com.luciano.productoapi.exception,ApiError,23,33,0,0,11,12,6,6,6,6
+producto-api,com.luciano.productoapi.controller,ProductoController,0,24,0,0,0,7,0,3,0,3

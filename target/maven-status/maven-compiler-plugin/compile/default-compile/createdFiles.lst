@@ -1,0 +1,11 @@
+com/luciano/productoapi/repository/ProductoRepository.class
+com/luciano/productoapi/exception/ApiError.class
+com/luciano/productoapi/controller/ProductoController.class
+com/luciano/productoapi/dto/ProductoRequestDTO.class
+com/luciano/productoapi/ProductoApiApplication.class
+com/luciano/productoapi/service/ProductoService$1.class
+com/luciano/productoapi/config/TestDataInitializer.class
+com/luciano/productoapi/exception/GlobalExceptionHandler.class
+com/luciano/productoapi/dto/ProductoResponseDTO.class
+com/luciano/productoapi/model/Producto.class
+com/luciano/productoapi/service/ProductoService.class

@@ -1,0 +1,10 @@
+/Users/luciano/Desktop/CS/JAVA/producto-api/src/main/java/com/luciano/productoapi/ProductoApiApplication.java
+/Users/luciano/Desktop/CS/JAVA/producto-api/src/main/java/com/luciano/productoapi/config/TestDataInitializer.java
+/Users/luciano/Desktop/CS/JAVA/producto-api/src/main/java/com/luciano/productoapi/controller/ProductoController.java
+/Users/luciano/Desktop/CS/JAVA/producto-api/src/main/java/com/luciano/productoapi/dto/ProductoRequestDTO.java
+/Users/luciano/Desktop/CS/JAVA/producto-api/src/main/java/com/luciano/productoapi/dto/ProductoResponseDTO.java
+/Users/luciano/Desktop/CS/JAVA/producto-api/src/main/java/com/luciano/productoapi/exception/ApiError.java
+/Users/luciano/Desktop/CS/JAVA/producto-api/src/main/java/com/luciano/productoapi/exception/GlobalExceptionHandler.java
+/Users/luciano/Desktop/CS/JAVA/producto-api/src/main/java/com/luciano/productoapi/model/Producto.java
+/Users/luciano/Desktop/CS/JAVA/producto-api/src/main/java/com/luciano/productoapi/repository/ProductoRepository.java
+/Users/luciano/Desktop/CS/JAVA/producto-api/src/main/java/com/luciano/productoapi/service/ProductoService.java

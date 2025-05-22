@@ -1,0 +1,3 @@
+com/luciano/productoapi/ProductoApiApplicationTests.class
+com/luciano/productoapi/service/ProductoServiceTest.class
+com/luciano/productoapi/controller/ProductoControllerTest.class

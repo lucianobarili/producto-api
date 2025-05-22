@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProductoController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">producto-api</a> &gt; <a href="index.source.html" class="el_package">com.luciano.productoapi.controller</a> &gt; <span class="el_source">ProductoController.java</span></div><h1>ProductoController.java</h1><pre class="source lang-java linenums">package com.luciano.productoapi.controller;
+
+import com.luciano.productoapi.dto.ProductoRequestDTO;
+import com.luciano.productoapi.dto.ProductoResponseDTO;
+import com.luciano.productoapi.model.Producto;
+import com.luciano.productoapi.service.ProductoService;
+import jakarta.validation.Valid;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.*;
+
+@RestController
+@RequestMapping(&quot;/productos&quot;)
+public class ProductoController {
+
+    private final ProductoService service;
+
+<span class="fc" id="L18">    public ProductoController(ProductoService service) {</span>
+<span class="fc" id="L19">        this.service = service;</span>
+<span class="fc" id="L20">    }</span>
+
+    @PostMapping
+    public ResponseEntity&lt;ProductoResponseDTO&gt; crearProducto(@RequestBody @Valid ProductoRequestDTO dto) {
+<span class="fc" id="L24">        ProductoResponseDTO creado = service.crearProducto(dto);</span>
+<span class="fc" id="L25">        return ResponseEntity.status(201).body(creado);</span>
+    }
+
+
+
+    @GetMapping
+    public ResponseEntity&lt;Page&lt;ProductoResponseDTO&gt;&gt; listarProductos(Pageable pageable) {
+<span class="fc" id="L32">        Page&lt;ProductoResponseDTO&gt; pagina = service.obtenerProductos(pageable);</span>
+<span class="fc" id="L33">        return ResponseEntity.ok(pagina);</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

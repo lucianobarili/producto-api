@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Producto.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">producto-api</a> &gt; <a href="index.source.html" class="el_package">com.luciano.productoapi.model</a> &gt; <span class="el_source">Producto.java</span></div><h1>Producto.java</h1><pre class="source lang-java linenums">package com.luciano.productoapi.model;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = &quot;productos&quot;)
+public class Producto {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank(message = &quot;El nombre no puede estar vacío&quot;)
+    @Size(max = 100, message = &quot;El nombre no puede tener más de 100 caracteres&quot;)
+    private String nombre;
+
+    @Size(max = 500, message = &quot;La descripción no puede tener más de 500 caracteres&quot;)
+    private String descripcion;
+
+    @NotNull(message = &quot;El precio es obligatorio&quot;)
+    @DecimalMin(value = &quot;0.01&quot;, message = &quot;El precio debe ser mayor a cero&quot;)
+    private BigDecimal precio;
+
+    @NotNull(message = &quot;El stock es obligatorio&quot;)
+    @Min(value = 0, message = &quot;El stock no puede ser negativo&quot;)
+    private Integer stock;
+
+    @Column(name = &quot;fecha_publicacion&quot;, updatable = false)
+    private LocalDateTime fechaPublicacion;
+
+    @PrePersist
+    public void prePersist() {
+<span class="fc" id="L37">        this.fechaPublicacion = LocalDateTime.now();</span>
+<span class="fc" id="L38">    }</span>
+
+    // Constructor vacío
+<span class="fc" id="L41">    public Producto() {}</span>
+
+    // Constructor completo
+<span class="fc" id="L44">    public Producto(Long id, String nombre, String descripcion, BigDecimal precio, Integer stock, LocalDateTime fechaPublicacion) {</span>
+<span class="fc" id="L45">        this.id = id;</span>
+<span class="fc" id="L46">        this.nombre = nombre;</span>
+<span class="fc" id="L47">        this.descripcion = descripcion;</span>
+<span class="fc" id="L48">        this.precio = precio;</span>
+<span class="fc" id="L49">        this.stock = stock;</span>
+<span class="fc" id="L50">        this.fechaPublicacion = fechaPublicacion;</span>
+<span class="fc" id="L51">    }</span>
+
+    // Getters y Setters
+
+    public Long getId() {
+<span class="fc" id="L56">        return id;</span>
+    }
+
+    public void setId(Long id) {
+<span class="nc" id="L60">        this.id = id;</span>
+<span class="nc" id="L61">    }</span>
+
+    public String getNombre() {
+<span class="fc" id="L64">        return nombre;</span>
+    }
+
+    public void setNombre(String nombre) {
+<span class="nc" id="L68">        this.nombre = nombre;</span>
+<span class="nc" id="L69">    }</span>
+
+    public String getDescripcion() {
+<span class="fc" id="L72">        return descripcion;</span>
+    }
+
+    public void setDescripcion(String descripcion) {
+<span class="nc" id="L76">        this.descripcion = descripcion;</span>
+<span class="nc" id="L77">    }</span>
+
+    public BigDecimal getPrecio() {
+<span class="fc" id="L80">        return precio;</span>
+    }
+
+    public void setPrecio(BigDecimal precio) {
+<span class="nc" id="L84">        this.precio = precio;</span>
+<span class="nc" id="L85">    }</span>
+
+    public Integer getStock() {
+<span class="fc" id="L88">        return stock;</span>
+    }
+
+    public void setStock(Integer stock) {
+<span class="nc" id="L92">        this.stock = stock;</span>
+<span class="nc" id="L93">    }</span>
+
+    public LocalDateTime getFechaPublicacion() {
+<span class="fc" id="L96">        return fechaPublicacion;</span>
+    }
+
+    public void setFechaPublicacion(LocalDateTime fechaPublicacion) {
+<span class="nc" id="L100">        this.fechaPublicacion = fechaPublicacion;</span>
+<span class="nc" id="L101">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
