@@ -62,6 +62,8 @@ open target/site/jacoco/index.html
 
 
 👨‍💻 Autor
-Luciano Barili
-Desarrollador Backend Jr | Especialista en Derecho Empresario
+Luciano Barili** – Backend Developer | Legal Tech Specialist
+
+- LinkedIn: [linkedin.com/in/lucianobarili-dev](https://linkedin.com/in/lucianobarili-dev)
+- GitHub: [github.com/lucianobarili](https://github.com/lucianobarili)
 
